@@ -1,0 +1,49 @@
+Assignment XML.1.0 - Drilon Braha
+
+Download and study http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd , the XHTML DTD.
+
+Answer the following questions:
+
+* Must input elements be inside forms?
+      No. According to the .dtd file, it states the following:
+      <!ELEMENT form %form.content;>   <!-- forms shouldn't be nested -->
+
+* Find and name the EMPTY elements.
+      <!ELEMENT area EMPTY>
+      <!ELEMENT input EMPTY>
+      <!ELEMENT col EMPTY>
+      <!ELEMENT base EMPTY>
+      <!ELEMENT meta EMPTY>
+      <!ELEMENT link EMPTY>
+      <!ELEMENT hr EMPTY>
+      <!ELEMENT br EMPTY>
+      <!ELEMENT param EMPTY>
+      <!ELEMENT img EMPTY>
+
+* May a table be empty? May a tr?
+      No. The table element must consist of a tbody or tr: (tbody+|tr+)
+      No. The tr can't be empty either due to (th|td)+, which means that it must consist of either
+      one or more th or td.
+
+* What are the possible attributes of a h2?
+      <!ENTITY % attrs "%coreattrs; %i18n; %events;">
+      % coreattrs:
+            id,
+            class,
+            style,
+            title
+      % i18n:
+            lang,
+            xml:lang,
+            dir
+      % events:
+            onclick,
+            ondblclick,
+            onmousedown,
+            onmouseup,
+            onmouseover,
+            onmousemove,
+            onmouseout,
+            onkeypress,
+            onkeydown,
+            onkeyup
